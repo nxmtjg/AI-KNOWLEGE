@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具 - AI Knowledge Hub</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tools.css">
+</head>
+<body>
+    <!-- 流星雨背景 -->
+    <div class="meteor-background"></div>
+
+    <!-- 顶部区域 -->
+    <header class="header">
+        <div class="header-top">
+            <div class="search-container">
+                <button class="search-button">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                        <circle cx="11" cy="11" r="7"/>
+                        <line x1="16" y1="16" x2="21" y2="21"/>
+                    </svg>
+                </button>
+                <a href="index.html" class="home-button">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="logo">
+                <h1>AI KNOWLEDGE HUB</h1>
+            </div>
+            <div></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index01.html">笔记</a></li>
+                <li><a href="index02.html">文章</a></li>
+                <li><a href="index03.html">工具</a></li>
+                <li><a href="index04.html">作品</a></li>
+                <li><a href="index05.html">关于我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主视觉区域 -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>AI TOOLS</h1>
+            <p>探索世界的无限可能</p>
+        </div>
+    </section>
+
+    <!-- AI工具展示区域 -->
+    <main class="tools-content">
+        <!-- 对话助手类 -->
+        <section class="tools-section">
+            <h2 class="section-title">对话助手</h2>
+            <p class="section-desc">智能对话与语言处理工具</p>
+            <div class="tools-grid">
+                <!-- Assistant -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🤖"></div>
+                    <div class="tool-info">
+                        <h3>Assistant</h3>
+                        <p>通用型AI助手，可以处理各类查询需求，提供最新信息和专业解答。</p>
+                        <a href="https://ai.google.dev/docs/gemini-api-overview" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- Grok-beta -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🧠"></div>
+                    <div class="tool-info">
+                        <h3>Grok-beta</h3>
+                        <p>由xAI开发的AI助手，具有实时互联网访问能力，擅长幽默对话和创意思维。</p>
+                        <a href="https://twitter.com/grok" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- Claude-3.5-Sonnet -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="💡"></div>
+                    <div class="tool-info">
+                        <h3>Claude-3.5-Sonnet</h3>
+                        <p>Anthropic的高级AI模型，擅长学术写作、代码开发和深度分析，支持多模态输入。</p>
+                        <a href="https://claude.ai/chats" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- Claude-3.5-Haiku -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="✨"></div>
+                    <div class="tool-info">
+                        <h3>Claude-3.5-Haiku</h3>
+                        <p>Anthropic的轻量级AI模型，响应速度更快，适合日常对话和简单任务处理。</p>
+                        <a href="https://claude.ai/chats" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- Kimi -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="☀️"></div>
+                    <div class="tool-info">
+                        <h3>Kimi</h3>
+                        <p>Moonshot AI开发的中文AI助手，理解中文语境，擅长文字创作和学术研究。</p>
+                        <a href="https://kimi.moonshot.cn/" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- Web-Search -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🔍"></div>
+                    <div class="tool-info">
+                        <h3>Web-Search</h3>
+                        <p>能够在互联网搜索并提供信息的网络助手机器人，特别适合查询最新资讯。</p>
+                        <a href="#" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- GPT-4o -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🚀"></div>
+                    <div class="tool-info">
+                        <h3>GPT-4o</h3>
+                        <p>OpenAI强大的语言模型，具备优秀的推理能力和创造力，支持多种专业领域应用。</p>
+                        <a href="https://chat.openai.com/" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- ElevenLabs -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🎧"></div>
+                    <div class="tool-info">
+                        <h3>ElevenLabs</h3>
+                        <p>领先的AI语音合成工具，支持多语言自然语音生成，可创建独特的AI音克隆和情感语音。</p>
+                        <a href="https://beta.elevenlabs.io" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 图像生成类 -->
+        <section class="tools-section">
+            <h2 class="section-title">图像生成</h2>
+            <p class="section-desc">AI艺术创作与图像处理工具</p>
+            <div class="tools-grid">
+                <!-- Midjourney -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🎨"></div>
+                    <div class="tool-info">
+                        <h3>Midjourney</h3>
+                        <p>强大的AI图像生成工具，擅长创作艺术风格的图像，支持自然语言描述生成高质量图片。</p>
+                        <a href="https://www.midjourney.com/" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- Stable Diffusion -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🖼️"></div>
+                    <div class="tool-info">
+                        <h3>Stable Diffusion</h3>
+                        <p>开源的AI图像生成模型，支持多种图像生成和编辑功能，可本地部署使用。</p>
+                        <a href="https://stability.ai/" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- DALL·E -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🎯"></div>
+                    <div class="tool-info">
+                        <h3>DALL·E</h3>
+                        <p>OpenAI开发的AI图像生成工具，能够根据文字描述生成独特的艺术作品，支持多种风格创作。</p>
+                        <a href="https://openai.com/dall-e-3" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- DeepDream -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🌈"></div>
+                    <div class="tool-info">
+                        <h3>DeepDream</h3>
+                        <p>Google开发的计算机视觉程序，能够创造出梦幻般的超现实主义图像，具有独特的视觉风格。</p>
+                        <a href="https://deepdreamgenerator.com/" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- FLUX-ultra -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🌟"></div>
+                    <div class="tool-info">
+                        <h3>FLUX-ultra</h3>
+                        <p>新一代AI图像生成工具，支持超高清图像生成和精细化编辑。</p>
+                        <a href="#" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- Imagen3 -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🎭"></div>
+                    <div class="tool-info">
+                        <h3>Imagen3</h3>
+                        <p>Google开发的图像生成模型，擅长生成照片级真实图像。</p>
+                        <a href="#" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- Luma -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="🎬"></div>
+                    <div class="tool-info">
+                        <h3>Luma</h3>
+                        <p>专业的AI视频生成工具，支持从文本生成高质量视频内容。</p>
+                        <a href="#" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+
+                <!-- FLUX -->
+                <div class="tool-card">
+                    <div class="tool-icon" data-emoji="✨"></div>
+                    <div class="tool-info">
+                        <h3>FLUX</h3>
+                        <p>轻量级AI图像处理工具，适合快速生成和编辑图像。</p>
+                        <a href="#" class="tool-link" target="_blank">立即使用</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3>笔记</h3>
+                    <ul>
+                        <li><a href="index01.html">学习</a></li>
+                        <li><a href="index01.html">穿搭</a></li>
+                        <li><a href="index01.html">旅游</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>文章</h3>
+                    <ul>
+                        <li><a href="index02.html">学年论文2023</a></li>
+                        <li><a href="index02.html">学年论文2024</a></li>
+                        <li><a href="index02.html">学术论文</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>工具</h3>
+                    <ul>
+                        <li><a href="index03.html">ChatGPT</a></li>
+                        <li><a href="index03.html">Midjourney</a></li>
+                        <li><a href="index03.html">Stable Diffusion</a></li>
+                        <li><a href="index03.html">DALL·E</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>作品</h3>
+                    <ul>
+                        <li><a href="index04.html">新闻报道</a></li>
+                        <li><a href="index04.html">H5</a></li>
+                        <li><a href="index04.html">海报</a></li>
+                        <li><a href="index04.html">短视频</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>关于我</h3>
+                    <ul>
+                        <li><a href="index05.html">基本信息</a></li>
+                        <li><a href="index05.html">校园经历</a></li>
+                        <li><a href="index05.html">技能特长</a></li>
+                        <li><a href="index05.html">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="meteor-container"></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>Copyright © 2024 AI Knowledge Hub All Rights Reserved</p>
+                </div>
+                <div class="contact">
+                    <p>联系邮箱：N3409085326@outlook.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Knowledge Hub</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="js/echarts-init.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- 点击触发的流星雨 -->
+    <div id="meteorShower"></div>
+
+    <!-- 流星雨背景 -->
+    <div class="meteor-background"></div>
+
+    <!-- 顶部区域 -->
+    <header class="header">
+        <div class="header-top">
+            <div class="search-container">
+                <button class="search-button">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                        <circle cx="11" cy="11" r="7"/>
+                        <line x1="16" y1="16" x2="21" y2="21"/>
+                    </svg>
+                </button>
+                <a href="index.html" class="home-button">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="logo">
+                <h1>AI KNOWLEDGE HUB</h1>
+            </div>
+            <div></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index01.html" class="nav-link">笔记</a></li>
+                <li><a href="index02.html" class="nav-link">文章</a></li>
+                <li><a href="index03.html" class="nav-link">工具</a></li>
+                <li><a href="index04.html" class="nav-link">作品</a></li>
+                <li><a href="index05.html" class="nav-link active">关于我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主体内容 -->
+    <main class="profile-content">
+        <h1 class="main-title"></h1>
+        <br>
+        <br>
+        <br>
+        <div class="cards-container">
+            <!-- 基本信息卡片 -->
+            <div class="card" data-index="0" id="info">
+                <div class="card-inner">
+                    <div class="card-content">
+                        <h2>基本信息</h2>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="label">姓名</span>
+                                <span class="value">聂显敏</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">专业</span>
+                                <span class="value">网络与新媒体</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">学历</span>
+                                <span class="value">本科</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">籍贯</span>
+                                <span class="value">陕西</span>
+                            </div>
+                            <div class="info-item"></div>
+                                <span class="label">政治面貌</span>
+                                <span class="value">共青团员</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 校园经历卡片 -->
+            <div class="card" data-index="1" id="campus">
+                <div class="card-inner">
+                    <div class="card-content">
+                        <h2>校园经历</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="time">2023-2024</div>
+                                <div class="content">
+                                    <h3>融媒体记者团编辑</h3>
+                                    <ul>
+                                        <li>主导完成5个重大新媒体项目</li>
+                                        <li>积极为社团提供选题</li>
+                                        <li>安排小组内部人员分工</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">2023-2024</div>
+                                <div class="content">
+                                    <h3>第十五届全国大学生广告艺术大赛</h3>
+                                    <ul>
+                                        <li>统筹选题，负责策划和构思内容</li>
+                                        <li>获得大广赛省级三等奖</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 技能特长卡片 -->
+            <div class="card" data-index="2" id="skills">
+                <div class="card-inner">
+                    <div class="card-content">
+                        <h2>技能特长</h2>
+                        <div class="skills-container">
+                            <!-- 添加雷达图容器 -->
+                            <div id="skillRadar" style="width: 100%; height: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 联系方式卡片 -->
+            <div class="card" data-index="3" id="contact">
+                <div class="card-inner">
+                    <div class="card-content">
+                        <h2>联系方式</h2>
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <i class="icon-phone"></i>
+                                <div class="contact-info">
+                                    <h3>电话</h3>
+                                    <p>13992457328</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="icon-email"></i>
+                                <div class="contact-info">
+                                    <h3>邮箱</h3>
+                                    <p>N3409085326@outlook.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="icon-wechat"></i>
+                                <div class="contact-info">
+                                    <h3>微信</h3>
+                                    <p>KookwMinisTURE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 导航按钮 -->
+        <div class="navigation">
+            <button class="nav-btn prev-btn">←</button>
+            <button class="nav-btn next-btn">→</button>
+        </div>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3>笔记</h3>
+                    <ul>
+                        <li><a href="index01.html">学习</a></li>
+                        <li><a href="index01.html">穿搭</a></li>
+                        <li><a href="index01.html">旅游</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>文章</h3>
+                    <ul>
+                        <li><a href="index02.html">学年论文2023</a></li>
+                        <li><a href="index02.html">学年论文2024</a></li>
+                        <li><a href="index02.html">学术论文</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>工具</h3>
+                    <ul>
+                        <li><a href="index03.htm">ChatGPT</a></li>
+                        <li><a href="index03.htm">Midjourney</a></li>
+                        <li><a href="index03.htm">Stable Diffusion</a></li>
+                        <li><a href="index03.htm">DALL·E</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>作品</h3>
+                    <ul>
+                        <li><a href="index04.html">新闻报道</a></li>
+                        <li><a href="index04.html">H5</a></li>
+                        <li><a href="index04.html">海报</a></li>
+                        <li><a href="index04.html">短视频</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>关于我</h3>
+                    <ul>
+                        <li><a href="index05.html">基本信息</a></li>
+                        <li><a href="/index05.html">校园经历</a></li>
+                        <li><a href="index05.html">技能特长</a></li>
+                        <li><a href="index05.html">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="meteor-container"></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>Copyright © 2024 AI Knowledge Hub All Rights Reserved</p>
+                </div>
+                <div class="contact">
+                    <p>联系邮箱：N3409085326@outlook.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/book.js"></script>
+</body>
+</html> 

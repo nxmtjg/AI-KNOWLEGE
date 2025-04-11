@@ -1,0 +1,307 @@
+/* 主视觉区域样式 */
+.hero-section {
+    height: 50vh;
+    margin-top: 150px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/14.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 1000px;
+    width: 90%;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+/* 工具展示区域样式 */
+.tools-content {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.tools-section {
+    margin-bottom: 60px;
+    padding: 40px 0;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+}
+
+.section-desc {
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 工具卡片网格布局 */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+/* 工具卡片样式 */
+.tool-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+/* AI工具图标样式 */
+.tool-icon {
+    width: 100%;
+    height: 160px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.tool-icon::before {
+    content: attr(data-emoji);
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--icon-bg);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* 移除原有的img标签样式 */
+.tool-icon img {
+    display: none;
+}
+
+/* 为每个工具设置不同的背景色 */
+.tool-card:nth-child(1) .tool-icon img { --icon-bg: rgba(255, 182, 193, 0.2); } /* ElevenLabs - 浅粉色 */
+.tool-card:nth-child(2) .tool-icon img { --icon-bg: rgba(173, 216, 230, 0.2); } /* Assistant - 浅蓝色 */
+.tool-card:nth-child(3) .tool-icon img { --icon-bg: rgba(144, 238, 144, 0.2); } /* Grok - 浅绿色 */
+.tool-card:nth-child(4) .tool-icon img { --icon-bg: rgba(221, 160, 221, 0.2); } /* Claude - 浅紫色 */
+.tool-card:nth-child(5) .tool-icon img { --icon-bg: rgba(255, 218, 185, 0.2); } /* Claude-Haiku - 浅橙色 */
+.tool-card:nth-child(6) .tool-icon img { --icon-bg: rgba(176, 224, 230, 0.2); } /* Kimi - 浅青色 */
+.tool-card:nth-child(7) .tool-icon img { --icon-bg: rgba(255, 192, 203, 0.2); } /* Web-Search - 浅玫瑰色 */
+.tool-card:nth-child(8) .tool-icon img { --icon-bg: rgba(230, 230, 250, 0.2); } /* GPT-4 - 浅薰衣草色 */
+
+/* 图片生成工具的背景色 */
+.tool-card:nth-child(9) .tool-icon img { --icon-bg: rgba(255, 160, 122, 0.2); }  /* FLUX-ultra - 浅珊瑚色 */
+.tool-card:nth-child(10) .tool-icon img { --icon-bg: rgba(152, 251, 152, 0.2); } /* Imagen3 - 浅绿色 */
+.tool-card:nth-child(11) .tool-icon img { --icon-bg: rgba(135, 206, 235, 0.2); } /* Luma - 浅天蓝色 */
+.tool-card:nth-child(12) .tool-icon img { --icon-bg: rgba(238, 130, 238, 0.2); } /* FLUX - 浅紫色 */
+.tool-card:nth-child(13) .tool-icon img { --icon-bg: rgba(255, 222, 173, 0.2); } /* Playground - 浅杏色 */
+.tool-card:nth-child(14) .tool-icon img { --icon-bg: rgba(216, 191, 216, 0.2); } /* Midjourney - 浅蓟色 */
+.tool-card:nth-child(15) .tool-icon img { --icon-bg: rgba(175, 238, 238, 0.2); } /* Stable Diffusion - 浅绿松石色 */
+.tool-card:nth-child(16) .tool-icon img { --icon-bg: rgba(255, 228, 225, 0.2); } /* DALL·E - 浅雾玫瑰色 */
+
+/* 悬停效果 */
+.tool-card:hover .tool-icon img {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tool-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.tool-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.tool-info p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.tool-link {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.tool-link:hover {
+    background-color: #333;
+}
+
+/* 搜索样式 */
+.search-section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 25px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.search-btn {
+    padding: 15px 40px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #333;
+}
+
+.voice-btn {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.voice-btn:hover {
+    transform: scale(1.1);
+}
+
+.mic-icon {
+    width: 24px;
+    height: 24px;
+    fill: #666;
+}
+
+.mic-icon.recording {
+    fill: #f00;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .tools-content {
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .tool-icon {
+        height: 140px;
+    }
+
+    .tool-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+} 

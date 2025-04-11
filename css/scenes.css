@@ -1,0 +1,298 @@
+/* 场景内容区域样式 */
+.scenes-content {
+    margin-top: 150px;
+    padding: 0 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    perspective: 1000px;
+}
+
+/* 场景板块样式 */
+.scene-block {
+    margin-bottom: 120px;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 80vh;
+    justify-content: center;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene-block:last-child {
+    border-bottom: none;
+}
+
+/* 添加遮罩层 */
+.scene-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* 确保内容在遮罩层之上 */
+.scene-block .block-title,
+.scene-block .block-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* 为每个板块设置背景图片 */
+.scene-block:nth-child(1) {
+    background-image: url("../image/7.jpg");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: overlay;
+}
+
+.scene-block:nth-child(2) {
+    background-image: url("../image/8.jpg");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: overlay;
+}
+
+.scene-block:nth-child(3) {
+    background-image: url("../image/9.jpg");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: overlay;
+}
+
+/* 标题样式 */
+.block-title {
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    color: #fff;
+    font-family: 'Playfair Display', 'Didot', 'Times New Roman', serif;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeInDown 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 添加标题装饰 */
+.block-title::before,
+.block-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+.block-title::before {
+    left: 20%;
+}
+
+.block-title::after {
+    right: 20%;
+}
+
+/* 内容布局优化 */
+.block-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 3;
+}
+
+/* 描述文本样式优化 */
+.block-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.block-desc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 详细信息样式优化 */
+.block-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.block-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.block-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.block-details li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.3px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+.block-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #000;
+}
+
+.block-details li:hover {
+    transform: translateX(5px);
+    color: #fff;
+}
+
+/* 链接按钮样式优化 */
+.block-link {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    align-self: flex-start;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.block-link:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+}
+
+/* 添加动画关键帧 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 响应式布局优化 */
+@media (max-width: 768px) {
+    .scenes-content {
+        padding: 0 20px;
+    }
+
+    .scene-block {
+        padding: 60px 20px;
+        margin-bottom: 60px;
+        min-height: auto;
+    }
+
+    .block-content {
+        grid-template-columns: 1fr;
+    }
+
+    .block-title {
+        font-size: 32px;
+        padding: 10px 0;
+    }
+
+    .block-desc {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .block-details {
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    .block-link {
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 添加新的滚动动画样式 */
+.scene-block {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scene-block.animate {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0.3;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
